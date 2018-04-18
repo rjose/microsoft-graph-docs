@@ -13,8 +13,8 @@ One of the following permissions is required to call this API. To learn more, in
 ## HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
-POST /workbook/tables/{id|name}/HeaderRowRange
-POST /workbook/worksheets/{id|name}/tables/{id|name}/HeaderRowRange
+GET /workbook/tables/{id|name}/HeaderRowRange
+GET /workbook/worksheets/{id|name}/tables/{id|name}/HeaderRowRange
 
 ```
 ## Request headers
@@ -22,8 +22,6 @@ POST /workbook/worksheets/{id|name}/tables/{id|name}/HeaderRowRange
 |:---------------|:----------|
 | Authorization  | Bearer {token}. Required. |
 | Workbook-Session-Id  | Workbook session Id that determines if changes are persisted or not. Optional.|
-
-## Request body
 
 ## Response
 
@@ -38,7 +36,7 @@ Here is an example of the request.
   "name": "table_headerrowrange"
 }-->
 ```http
-POST https://graph.microsoft.com/v1.0/me/drive/items/{id}/workbook/tables/{id|name}/HeaderRowRange
+GET https://graph.microsoft.com/v1.0/me/drive/items/{id}/workbook/tables/{id|name}/HeaderRowRange
 ```
 
 ##### Response
